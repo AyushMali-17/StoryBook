@@ -16,11 +16,26 @@
             <button id="choice1" class="choice-button" onclick="makeChoice(1)">Take the left path</button>
             <button id="choice2" class="choice-button" onclick="makeChoice(2)">Take the right path</button>
             <button id="choice3" class="choice-button" onclick="makeChoice(3)">Sit and wait</button>
+            <button id="choice4" class="choice-button hidden" onclick="makeChoice(4)">Talk to the bunny</button>
+            <button id="choice5" class="choice-button hidden" onclick="makeChoice(5)">Fly with the dragon</button>
+            <button id="choice6" class="choice-button hidden" onclick="makeChoice(6)">Explore the waterfall</button>
+            <button id="choice7" class="choice-button hidden" onclick="makeChoice(7)">Follow the rainbow</button>
+            <button id="choice8" class="choice-button hidden" onclick="makeChoice(8)">Find the hidden treasure</button>
+            <button id="choice9" class="choice-button hidden" onclick="makeChoice(9)">Help the lost fairy</button>
         </div>
         <div id="feedback" class="feedback-box">
             <p id="feedback-text"></p>
         </div>
+        <div id="animation-container" class="animation-box">
+            <img id="animation-image" src="" alt="Animation">
+        </div>
     </div>
+    <audio id="button-sound" src="button-click.mp3"></audio>
+    <audio id="transition-sound" src="transition.mp3"></audio>
+    <audio id="magic-sound" src="magic-sound.mp3"></audio>
+    <audio id="dragon-sound" src="dragon-roar.mp3"></audio>
+    <audio id="waterfall-sound" src="waterfall-sound.mp3"></audio>
+    <audio id="rainbow-sound" src="rainbow-sound.mp3"></audio>
     <script src="script.js"></script>
 </body>
 </html>
