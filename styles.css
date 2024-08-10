@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e0f7fa;
     color: #333;
     margin: 0;
     padding: 0;
@@ -8,19 +8,35 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
+}
+
+.background-container {
+    background: linear-gradient(to bottom, #004d40, #00796b);
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .storybook-container {
-    background-color: #fff;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     max-width: 600px;
     text-align: center;
+    position: relative;
+    z-index: 10;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 #story-content {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 button {
@@ -32,10 +48,12 @@ button {
     background-color: #007bff;
     color: white;
     font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 #story-content p {
@@ -45,10 +63,11 @@ button:hover {
 
 .hidden {
     opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 #feedback {
-    margin-top: 20px;
+    margin-top: 30px;
     font-style: italic;
     color: #555;
 }
@@ -62,23 +81,49 @@ button:hover {
     opacity: 1;
 }
 
-/* New styles for different story outcomes */
-.hidden-cave {
-    background-color: #222;
+/* New background and image styles */
+.visuals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#forest-img, #cave-img, #tree-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.visible-img {
+    opacity: 1;
+}
+
+.hidden-cave .storybook-container {
+    background-color: rgba(20, 20, 20, 0.9);
     color: #fff;
 }
 
-.ancient-tree {
-    background-color: #228B22;
+.hidden-cave #cave-img {
+    opacity: 1;
+}
+
+.ancient-tree .storybook-container {
+    background-color: rgba(34, 139, 34, 0.9);
     color: #fff;
+}
+
+.ancient-tree #tree-img {
+    opacity: 1;
 }
 
 .crossroads {
-    background-color: #DAA520;
+    background-color: rgba(218, 165, 32, 0.9);
     color: #000;
-}
-
-.new-choice {
-    display: block;
-    transition: display 1s ease-in-out;
 }

@@ -7,21 +7,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="storybook-container">
-        <h1>Welcome to the Interactive Storybook</h1>
-        <div id="story-content">
-            <p id="story-text">You find yourself in a dark forest. Two paths lie ahead.</p>
+    <div class="background-container">
+        <div class="storybook-container">
+            <h1>Welcome to the Interactive Storybook</h1>
+            <div id="story-content">
+                <p id="story-text">You find yourself in a dark forest. Two paths lie ahead.</p>
+            </div>
+            <div id="choices">
+                <button id="choice1" onclick="makeChoice(1)">Take the left path</button>
+                <button id="choice2" onclick="makeChoice(2)">Take the right path</button>
+                <button id="choice3" onclick="makeChoice(3)">Sit and wait</button>
+                <button id="choice4" style="display: none;" onclick="makeChoice(4)">Return to the crossroads</button>
+                <button id="choice5" style="display: none;" onclick="makeChoice(5)">Explore the hidden cave</button>
+                <button id="choice6" style="display: none;" onclick="makeChoice(6)">Climb the ancient tree</button>
+            </div>
+            <div id="feedback">
+                <p id="feedback-text"></p>
+            </div>
         </div>
-        <div id="choices">
-            <button id="choice1" onclick="makeChoice(1)">Take the left path</button>
-            <button id="choice2" onclick="makeChoice(2)">Take the right path</button>
-            <button id="choice3" onclick="makeChoice(3)">Sit and wait</button>
-            <button id="choice4" style="display: none;" onclick="makeChoice(4)">Return to the crossroads</button>
-            <button id="choice5" style="display: none;" onclick="makeChoice(5)">Explore the hidden cave</button>
-            <button id="choice6" style="display: none;" onclick="makeChoice(6)">Climb the ancient tree</button>
-        </div>
-        <div id="feedback">
-            <p id="feedback-text"></p>
+        <div class="visuals">
+            <img id="forest-img" src="forest.jpg" alt="Forest" class="hidden">
+            <img id="cave-img" src="cave.jpg" alt="Cave" class="hidden">
+            <img id="tree-img" src="tree.jpg" alt="Tree" class="hidden">
         </div>
     </div>
     <script src="script.js"></script>
