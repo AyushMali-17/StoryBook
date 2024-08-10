@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Storybook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="storybook-container">
+        <h1>Welcome to the Interactive Storybook</h1>
+        <div id="story-content">
+            <p id="story-text">You find yourself in a dark forest. Two paths lie ahead.</p>
+        </div>
+        <div id="choices">
+            <button id="choice1" onclick="makeChoice(1)">Take the left path</button>
+            <button id="choice2" onclick="makeChoice(2)">Take the right path</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
