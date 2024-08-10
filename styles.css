@@ -37,3 +37,48 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+#story-content p {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+#feedback p {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}
+
+/* New styles for different story outcomes */
+.hidden-cave {
+    background-color: #222;
+    color: #fff;
+}
+
+.ancient-tree {
+    background-color: #228B22;
+    color: #fff;
+}
+
+.crossroads {
+    background-color: #DAA520;
+    color: #000;
+}
+
+.new-choice {
+    display: block;
+    transition: display 1s ease-in-out;
+}
