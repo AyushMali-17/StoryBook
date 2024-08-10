@@ -1,61 +1,28 @@
 const storyText = document.getElementById('story-text');
 const feedbackText = document.getElementById('feedback-text');
-const forestImg = document.getElementById('forest-img');
-const caveImg = document.getElementById('cave-img');
-const treeImg = document.getElementById('tree-img');
 
 function makeChoice(choice) {
-    // Fade out the current story content
+    // Animate out the current story content
     storyText.classList.add('hidden');
     feedbackText.classList.remove('visible');
 
     setTimeout(() => {
         if (choice === 1) {
-            storyText.textContent = "You take the left path and discover a hidden treasure!";
-            feedbackText.textContent = "You feel a sense of accomplishment.";
-            document.getElementById('choice4').style.display = 'block';
-            showImage(forestImg);
+            storyText.textContent = "You take the left path and find a magical talking bunny!";
+            feedbackText.textContent = "The bunny gives you a golden key.";
+            // Add more story options here if desired
         } else if (choice === 2) {
-            storyText.textContent = "You take the right path and encounter a wild animal!";
-            feedbackText.textContent = "You manage to escape, but you are shaken.";
-            document.getElementById('choice5').style.display = 'block';
-            showImage(forestImg);
+            storyText.textContent = "You take the right path and discover a hidden rainbow waterfall!";
+            feedbackText.textContent = "You feel joyful and refreshed.";
+            // Add more story options here if desired
         } else if (choice === 3) {
-            storyText.textContent = "You sit and wait. Nothing happens.";
-            feedbackText.textContent = "Patience is a virtue, but nothing ventured, nothing gained.";
-            document.getElementById('choice6').style.display = 'block';
-            showImage(forestImg);
-        } else if (choice === 4) {
-            storyText.textContent = "You return to the crossroads, ready to choose again.";
-            feedbackText.textContent = "Sometimes, it's wise to reconsider your options.";
-            document.getElementById('choice1').style.display = 'block';
-            document.getElementById('choice2').style.display = 'block';
-            hideImages();
-        } else if (choice === 5) {
-            storyText.textContent = "You explore the hidden cave and find ancient relics.";
-            feedbackText.textContent = "You have uncovered secrets long forgotten.";
-            document.getElementById('story-content').classList.add('hidden-cave');
-            showImage(caveImg);
-        } else if (choice === 6) {
-            storyText.textContent = "You climb the ancient tree and gain a new perspective on the forest.";
-            feedbackText.textContent = "The view is breathtaking, and you feel enlightened.";
-            document.getElementById('story-content').classList.add('ancient-tree');
-            showImage(treeImg);
+            storyText.textContent = "You sit and wait. Suddenly, a friendly dragon appears!";
+            feedbackText.textContent = "The dragon invites you to fly with it.";
+            // Add more story options here if desired
         }
 
-        // Fade in the new story content and feedback
+        // Animate in the new story content and feedback
         storyText.classList.remove('hidden');
         feedbackText.classList.add('visible');
     }, 1000);
-}
-
-function showImage(imgElement) {
-    hideImages();
-    imgElement.classList.add('visible-img');
-}
-
-function hideImages() {
-    forestImg.classList.remove('visible-img');
-    caveImg.classList.remove('visible-img');
-    treeImg.classList.remove('visible-img');
 }
